@@ -5,10 +5,10 @@
 
 	<body>
           <h1 align = "center">Change border or background</h1>
-          <p id = "para" align = "center">A true friend is one who will share in your joys and in your troubles. Your friend will feel joy in your enjoyment and pain in your time of trouble. It is heart-warming and comforting to have a real friend. You know you will have a shoulder to weep on if sorrow or failure comes your way. Just as you will be assured of a hand to share a high five with in your joy and success. A friend is one who shares with you with no expectations. There is no quid pro quo in such a friendship. Friendship gives true happiness, because when you have a real friend you have all their love.</p>
+          <p id = "para" align = "center" style="border: thick solid white">A true friend is one who will share in your joys and in your troubles. Your friend will feel joy in your enjoyment and pain in your time of trouble. It is heart-warming and comforting to have a real friend. You know you will have a shoulder to weep on if sorrow or failure comes your way. Just as you will be assured of a hand to share a high five with in your joy and success. A friend is one who shares with you with no expectations. There is no quid pro quo in such a friendship. Friendship gives true happiness, because when you have a real friend you have all their love.</p>
           <br>
           <h2>Change border</h2>
-          <p>Enter RGB value for Border (from 0-255)</p>
+          <p>Enter RGB value for Border (from 0-255) and Width (thin|medium|thick)</p>
           Red    <input type="text" id="redBo"> <br>
           Blue   <input type="text" id="blueBo"> <br>
           Green  <input type="text" id="greenBo"> <br>
@@ -19,8 +19,27 @@
           Red    <input type="text" id="redBa"> <br>
           Blue   <input type="text" id="blueBa"> <br>
           Green  <input type="text" id="greenBa"> <br>
-          Width  <input type="text" id="widthBa"> <br>
           <br>
           <button type = "<button type="button" onclick = "change_background()">Change background</button>
-	</body>
+</body>
+          <script>
+            function change_background() {
+                let red = document.getElementById("redBa").value;
+                let green = document.getElementById("greenBa").value;
+                let blue = document.getElementById("blueBa").value;
+                document.getElementById("para").style.backgroundColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+            }
+
+            function change_border() {
+                let red = document.getElementById("redBo").value;
+                let green = document.getElementById("greenBo").value;
+                let blue = document.getElementById("blueBo").value;
+                let width = document.getElementById("widthBo").value;
+                document.getElementById("para").style.borderColor = 'rgb(' + red + ',' + green + ',' + blue + ')';
+                document.getElementById("para").style.borderWidth = width + "px";
+            }
+
+
+          </script>
+
 </html>
