@@ -11,13 +11,13 @@
         <button type = "<button type="button" onclick = "prev()">Previous</button>
         <button type = "<button type="button" onclick = "next()">Next</button>
         <script>
+          let p1 = "https://i.pinimg.com/originals/8d/82/9e/8d829ec69df2baeefb562091ed777195.jpg";
+          let p2 = "https://i.pinimg.com/originals/03/b8/73/03b87351b10ce886f27f377c41f3f943.jpg";
+          let p3 = "https://splashanddashfordogs.com/wp-content/uploads/2017/08/dogs-in-snow.jpg";
+          let p4 = "https://cdn.mos.cms.futurecdn.net/BwL2586BtvBPywasXXtzwA-320-80.jpeg";
+          let p5 = "https://thehappypuppysite.com/wp-content/uploads/2018/03/best-food-for-golden-retriever-puppies-header.jpg"
           function prev()
           {
-            let p1 = "https://i.pinimg.com/originals/8d/82/9e/8d829ec69df2baeefb562091ed777195.jpg";
-            let p2 = "https://i.pinimg.com/originals/03/b8/73/03b87351b10ce886f27f377c41f3f943.jpg";
-            let p3 = "https://splashanddashfordogs.com/wp-content/uploads/2017/08/dogs-in-snow.jpg";
-            let p4 = "https://cdn.mos.cms.futurecdn.net/BwL2586BtvBPywasXXtzwA-320-80.jpeg";
-            let p5 = "https://thehappypuppysite.com/wp-content/uploads/2018/03/best-food-for-golden-retriever-puppies-header.jpg"
             if(document.getElementById("p").src == p1)
             {
               document.getElementById("p").src = p5;
@@ -39,6 +39,30 @@
               document.getElementById("p").src = p4;
             }
 
+          }
+
+          function next()
+          {
+            if(document.getElementById("p").src == p1)
+            {
+              document.getElementById("p").src = p2;
+            }
+            else if(document.getElementById("p").src == p2)
+            {
+              document.getElementById("p").src = p3;
+            }
+            else if(document.getElementById("p").src == p3)
+            {
+              document.getElementById("p").src = p4;
+            }
+            else if(document.getElementById("p").src == p4)
+            {
+              document.getElementById("p").src = p5;
+            }
+            else if(document.getElementById("p").src == p5)
+            {
+              document.getElementById("p").src = p1;
+            }
           }
         </script>
 	</body>
